@@ -48,6 +48,7 @@ equations and/or bibliography references.
 %doc %{_texmfdistdir}/doc/latex/refcheck/README
 %doc %{_texmfdistdir}/doc/latex/refcheck/refdemo.pdf
 %doc %{_texmfdistdir}/doc/latex/refcheck/refdemo.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -58,3 +59,5 @@ equations and/or bibliography references.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
