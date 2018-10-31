@@ -6,7 +6,7 @@
 # catalog-version 1.7
 Name:		texlive-refcheck
 Version:	1.9.1
-Release:	1
+Release:	2
 Summary:	Check references (in figures, table, equations, etc)
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/refcheck
