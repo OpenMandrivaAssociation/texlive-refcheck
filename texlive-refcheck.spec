@@ -1,18 +1,12 @@
-# revision 29128
-# category Package
-# catalog-ctan /macros/latex/contrib/refcheck
-# catalog-date 2012-06-26 13:14:08 +0200
-# catalog-license gpl
-# catalog-version 1.7
 Name:		texlive-refcheck
-Version:	1.9.1
-Release:	2
+Version:	29128
+Release:	1
 Summary:	Check references (in figures, table, equations, etc)
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/refcheck
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/refcheck.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/refcheck.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/refcheck.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/refcheck.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -26,12 +20,12 @@ also display label names in text near corresponding numbers of
 equations and/or bibliography references.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -42,7 +36,7 @@ equations and/or bibliography references.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
