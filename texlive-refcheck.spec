@@ -1,6 +1,6 @@
 Name:		texlive-refcheck
 Version:	29128
-Release:	1
+Release:	2
 Summary:	Check references (in figures, table, equations, etc)
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/refcheck
